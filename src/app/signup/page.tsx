@@ -73,6 +73,16 @@ function Signup() {
             <input type="password" className={`w-full rounded-sm p-2 ${errors.repeatPassword && "border-2 border-orange-600"} `} {...register("repeatPassword")} />
             {errors.repeatPassword && <span className="text-orange-600">{errors.repeatPassword.message}</span>}
           </div>
+          {/* <label htmlFor="">Selected rol</label>
+          
+          <ul>
+            <li>
+              <input type="radio" value={'usuario'} />
+            </li>
+            <li>
+              <input type="radio" value={'admin'} />
+            </li>
+          </ul> */}
 
           <button type="submit" className="bg-blue-600 hover:bg-blue-800 rounded-md w-full p-2 mt-5 text-white">
             Send

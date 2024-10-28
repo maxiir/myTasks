@@ -13,6 +13,10 @@ const UserModel = new Schema({
         require: true,
         type: String
     }
+    // role: {
+    //     type: String,
+    //     default: 'user'
+    // }
 
 })
 

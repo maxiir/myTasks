@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import {createToken} from '@/lib/jwt'
 import bcrypt from 'bcrypt'
-import newUser from "@/model/newUser";
+import newUser from "@/model/user";
 import dbConnect from "@/db/db_connect";
 
 export async function POST(req: NextRequest){

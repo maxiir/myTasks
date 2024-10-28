@@ -14,7 +14,7 @@ function Page() {
         description: string
     }
 
-    const {id} = useParams()
+    const {id} = useParams<{id:string}>()
 
     const {register, handleSubmit, reset} = useForm<FormData>({
         resolver: zodResolver(addTask),
@@ -60,7 +60,7 @@ function Page() {
 
     }
 
-    const deleteTask = async (id_task) => {
+    const deleteTask = async (id_task:string) => {
         const res = await fetch(`/api/tasks/${id_task}`, {
             method: 'DELETE'
         })
@@ -76,7 +76,7 @@ function Page() {
   return (
     <div className='flex justify-center items-center h-screen'>
         <div className='bg-blue-950 p-5 rounded-xl'>
-            <form  onSubmit={handleSubmit(sendData)}>
+            <form onSubmit={handleSubmit(sendData)}>
                 <h2 className="text-white font-bold text-xl mb-5">{id ? 'Edit Task' : 'Create new task'}</h2>
                 <label className='text-white'>Title</label>
                 <input type="text" className='w-full p-2' {...register('title')}/>

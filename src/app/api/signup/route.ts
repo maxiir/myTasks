@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import newUser from "@/model/newUser";
+import newUser from "@/model/user";
 import dbConnect from "@/db/db_connect";
 import { signUpSchema } from "@/schemas/signupSchema";
 import {z} from 'zod'
